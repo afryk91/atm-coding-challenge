@@ -7,8 +7,7 @@ const smallestNote = _.min(AVAILABLE_NOTES);
 
 function splitCashToNotes(cash) {
 	return _.chain(AVAILABLE_NOTES)
-        .sortBy()
-        .reverse()
+        .sortBy(x => -x)
         .reduce(({remainingCash, notes}, currentNote) => {
             const maxCurrentNotes = Math.floor(remainingCash / currentNote);
             return {
@@ -25,11 +24,12 @@ function splitCashToNotes(cash) {
 }
 
 function convert(cash) {
-    if (_.isNil(cash)) {
+    if (cash === null || cash === undefined) {
         return [];
     }
-    if (!_.isNumber(cash) || cash < 0) {
-        throw new InvalidInputError('Cash amount should be a positive number');
+
+    if (_.isNaN(cash) || !_.isNumber(cash) || cash < 0) {
+        throw new InvalidInputError();
     }
     if (cash % smallestNote) {
         throw new NoteUnavailableError();
