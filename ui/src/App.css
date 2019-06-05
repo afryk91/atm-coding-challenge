@@ -1,0 +1,14 @@
+.screen {
+  width: 100vw;
+  height: 100vh;
+  padding: 3%;
+  
+  background: #1251e3;
+  color: #f4f4f4;
+}
+
+.header {
+  font-size: 5em;
+  width: 100%;
+  text-align: center;
+}

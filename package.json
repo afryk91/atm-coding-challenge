@@ -4,7 +4,10 @@
   "description": "Coding challenge task for technical interview",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test --recursive"
+    "test": "mocha ./test --recursive",
+    "start": "node index.js",
+    "build-ui": "cd ui && npm install && npm run build && cp -r build/ ../dist",
+    "build": "npm install && npm run build-ui"
   },
   "author": "Krystian Ogierman <krystian.ogierman@gmail.com>",
   "license": "ISC",

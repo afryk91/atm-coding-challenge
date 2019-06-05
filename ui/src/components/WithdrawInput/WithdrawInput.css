@@ -1,0 +1,18 @@
+.input-field {
+    width: 70%;
+    font-size: 2em;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btn {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 5px;
+    border-radius: 5px;
+    border: 0;
+    background: #173b8f;
+    color: #fefefe;
+    padding: 5px;
+}
